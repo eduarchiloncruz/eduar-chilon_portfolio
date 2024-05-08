@@ -1,0 +1,24 @@
+<div
+  class="bg-gradient-primary text-white py-44 max-sm:py-32 px-[3vw] w-[100%]"
+>
+  <div
+    class="max-w-[1280px] m-auto bg-black-alpha-60 py-4 px-8 w-full relative"
+  >
+    <div
+      class="bg-gray-900 p-0 lg:p-10 rounded-3xl absolute left-0 right-0 top-[-250px] max-sm:top-[-220px]"
+      id="skills"
+    >
+      <div class="flex justify-between items-center flex-col md:flex-row mb-6">
+        <h2 class="font-bold text-5xl">About skills</h2>
+        <app-select-skill
+          (selectedSkillChange)="selectedSkillChange($event)"
+        ></app-select-skill>
+      </div>
+      <div>
+        <app-carousel-skill
+          [skillGroup]="skillGroupSelected"
+        ></app-carousel-skill>
+      </div>
+    </div>
+  </div>
+</div>

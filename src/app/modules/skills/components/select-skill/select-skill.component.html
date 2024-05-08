@@ -1,0 +1,10 @@
+<form [formGroup]="formGroup">
+  <p-dropdown
+    styleClass="bg-gradient-primary"
+    formControlName="selectedCity"
+    [options]="skills"
+    optionLabel="name"
+    placeholder="Select skill"
+    (onChange)="onSkillChange($event)"
+  />
+</form>

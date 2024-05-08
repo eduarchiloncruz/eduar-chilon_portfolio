@@ -1,0 +1,17 @@
+<div
+  class="bg-no-repeat bg-cover h-[170px] rounded-lg cursor-pointer"
+  [style.background-image]="'url(./assets/projects/' + project.image + '.png)'"
+  (click)="showDialog()"
+>
+  <span
+    class="hover:backdrop-sepia-0 hover:bg-gray-700/75 h-full w-full rounded-lg flex justify-center items-center"
+  ></span>
+</div>
+<p class="text-center cursor-pointer" (click)="showDialog()">
+  {{ project.name }}
+</p>
+<app-project-item-dialog
+  [visible]="visible"
+  (closeDialog)="showDialog()"
+  [project]="project"
+></app-project-item-dialog>

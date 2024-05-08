@@ -1,0 +1,17 @@
+<div
+  class="bg-gray-950 text-white px-[3vw] pb-32 pt-8 bg-cover w-[100%]"
+  id="projects"
+>
+  <div class="max-w-[1280px] m-auto bg-black-alpha-60 py-4 w-full">
+    <h2 class="font-bold text-5xl text-center mb-8">Projects</h2>
+    <div
+      class="flex w-[100%] justify-center gap-10 font-bold items-center flex-wrap"
+    >
+      <app-project-item
+        *ngFor="let project of projects"
+        [project]="project"
+        class="w-[25%] max-lg:w-[40%] max-sm:w-[70%]"
+      ></app-project-item>
+    </div>
+  </div>
+</div>

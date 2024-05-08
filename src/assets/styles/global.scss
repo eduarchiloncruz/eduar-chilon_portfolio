@@ -1,0 +1,35 @@
+html,
+body {
+  margin: 0;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+.bg-gradient-primary {
+  background: linear-gradient(
+    90.21deg,
+    rgb(98, 6, 61) -5.91%,
+    rgb(12, 2, 54) 111.58%
+  );
+}
+
+.p-dropdown-label {
+  color: white;
+  min-width: 180px;
+}
+
+.p-toast-message-content {
+  background-color: white;
+}
+
+.p-dialog-header {
+  padding: 0;
+}
+
+.p-dialog-content {
+  padding-top: 15px;
+  border-radius: 15px;
+  background-color: rgb(9, 17, 40);
+}

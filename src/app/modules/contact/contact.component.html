@@ -1,0 +1,125 @@
+<div class="bg-gradient-primary text-white px-[3vw] w-[100%]" id="contact">
+  <div
+    class="max-w-[1280px] m-auto flex justify-between flex-col-reverse lg:flex-row w-[100%] gap-24 max-md:gap-10 items-center py-20 max-md:py-10"
+  >
+    <div class="lg:w-[40%] w-[75%]">
+      <img
+        src="./assets/images/contact-image.png"
+        alt="my profile picture"
+        class="w-full h-full"
+      />
+    </div>
+    <div class="lg:w-[60%] max-lg:w-[100%]">
+      <h2 class="font-bold text-5xl mb-6">Get In Touch</h2>
+      <form
+        class="flex justify-end w-auto flex-col gap-5"
+        [formGroup]="contactForm"
+        (ngSubmit)="onSubmit()"
+      >
+        <div class="flex gap-5 max-md:flex-col">
+          <div class="flex-grow">
+            <span class="font-semibold"
+              >Name <span class="text-red-600">*</span></span
+            >
+            <input
+              type="text"
+              class="bg-transparent p-2 border-solid border border-white rounded-md w-full text-white text-base mt-2"
+              placeholder="Your name"
+              formControlName="name"
+              required
+            />
+            <div
+              *ngIf="name.invalid && (name.dirty || name.touched)"
+              class="text-red-500 mt-1 text-sm"
+            >
+              <span *ngIf="name.errors?.['required']">Name is required</span>
+            </div>
+          </div>
+          <div class="flex-grow">
+            <span class="font-semibold"
+              >Email <span class="text-red-600">*</span></span
+            >
+            <input
+              type="email"
+              class="bg-transparent p-2 border-solid border border-white rounded-md w-full text-white text-base mt-2"
+              placeholder="Your email"
+              formControlName="email"
+              required
+            />
+            <div
+              *ngIf="email.invalid && (email.dirty || email.touched)"
+              class="text-red-500 mt-1 text-sm"
+            >
+              <span *ngIf="email.errors?.['required']">Email is required</span>
+              <span *ngIf="email.errors?.['email']"
+                >Email format is not valid</span
+              >
+            </div>
+          </div>
+        </div>
+        <div class="flex-grow">
+          <span class="font-semibold"
+            >Subject <span class="text-red-600">*</span></span
+          >
+          <input
+            type="text"
+            class="bg-transparent p-2 border-solid border border-white rounded-md w-full text-white text-base mt-2"
+            placeholder="Subject message"
+            formControlName="subject"
+            required
+          />
+          <div
+            *ngIf="subject.invalid && (subject.dirty || subject.touched)"
+            class="text-red-500 mt-1 text-sm"
+          >
+            <span *ngIf="subject.errors?.['required']"
+              >Subject is required</span
+            >
+          </div>
+        </div>
+        <div class="flex-grow">
+          <span class="font-semibold"
+            >Message <span class="text-red-600">*</span></span
+          >
+          <textarea
+            name=""
+            class="bg-transparent p-2 border-solid border border-white rounded-md w-full min-h-40 text-white text-base mt-2 font-[inherit]"
+            placeholder="Your message"
+            formControlName="message"
+            required
+          ></textarea>
+          <div
+            *ngIf="message.invalid && (message.dirty || message.touched)"
+            class="text-red-500 mt-1 text-sm"
+          >
+            <span *ngIf="message.errors?.['required']"
+              >Message is required</span
+            >
+          </div>
+        </div>
+        <p-button
+          *ngIf="!isSending"
+          [outlined]="true"
+          type="submit"
+          styleClass="bg-white text-black rounded-none font-bold px-10 border-none py-4 hover:bg-black hover:text-white"
+        >
+          Send</p-button
+        >
+        <p-button
+          *ngIf="isSending"
+          [outlined]="true"
+          styleClass="flex items-center gap-5 hover:bg-white hover:text-black rounded-none font-bold px-10 border-none bg-black text-white"
+        >
+          Sending
+          <p-progressSpinner
+            styleClass="w-[30px] bg-transparent h-[35px]"
+            strokeWidth="8"
+            fill="none"
+            animationDuration=".5s"
+          ></p-progressSpinner
+        ></p-button>
+      </form>
+    </div>
+  </div>
+</div>
+<p-toast [life]="10000" />

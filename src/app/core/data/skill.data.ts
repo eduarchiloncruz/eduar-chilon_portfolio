@@ -1,0 +1,103 @@
+import { SkillGroup } from '../models/skill.model';
+
+export const SKILLS: SkillGroup[] = [
+  {
+    id: 1,
+    name: 'Front End',
+    fileTag: 'front-end',
+    data: [
+      { id: 1, name: 'Html 5', image: 'html5' },
+      { id: 2, name: 'Css 3', image: 'css3' },
+      { id: 3, name: 'JavaScript', image: 'js' },
+      { id: 4, name: 'React Js', image: 'react' },
+      { id: 5, name: 'Angular', image: 'angular' },
+      { id: 7, name: 'Chakra UI', image: 'chakraui' },
+      { id: 8, name: 'Tailwind', image: 'tailwind' },
+      { id: 9, name: 'Bootstrap', image: 'bootstrap' },
+      { id: 10, name: 'Sass', image: 'sass' },
+      { id: 11, name: 'Firebase', image: 'firebase' },
+      { id: 12, name: 'TypeScript', image: 'typescript' },
+      { id: 13, name: 'Next Js', image: 'nextjs' },
+      { id: 14, name: 'Story Book', image: 'storybook' },
+      { id: 15, name: 'GraphQL', image: 'graphql' },
+    ],
+  },
+  {
+    id: 2,
+    name: 'Back End',
+    fileTag: 'back-end',
+    data: [
+      { id: 1, name: 'Node Js', image: 'nodejs' },
+      { id: 2, name: 'Express', image: 'express' },
+      { id: 3, name: 'Java', image: 'java' },
+      { id: 4, name: 'Spring', image: 'spring' },
+      { id: 5, name: 'JUnit 5', image: 'junit5' },
+      { id: 6, name: 'Hibernate', image: 'hibernate' },
+      { id: 7, name: '.Net', image: 'net' },
+      { id: 8, name: 'Entity Framework', image: 'entityframework' },
+      { id: 9, name: 'C#', image: 'csharp' },
+      { id: 10, name: 'MVC', image: 'mvc' },
+      { id: 11, name: 'API Rest', image: 'apirest' },
+    ],
+  },
+  {
+    id: 3,
+    name: 'Data Base',
+    fileTag: 'data-base',
+    data: [
+      { id: 1, name: 'Relational DB', image: 'relationaldb' },
+      { id: 2, name: 'SQL', image: 'sql' },
+      { id: 3, name: 'Transact SQL', image: 'transactsql' },
+      { id: 4, name: 'MySql', image: 'mysql' },
+      { id: 5, name: 'SQL Server', image: 'sqlserver' },
+      { id: 6, name: 'Mongo DB', image: 'mongodb' },
+    ],
+  },
+  {
+    id: 4,
+    name: 'Repository',
+    fileTag: 'repository',
+    data: [
+      { id: 1, name: 'Git', image: 'git' },
+      { id: 2, name: 'GitHub', image: 'github' },
+      { id: 3, name: 'Azure Repos', image: 'azurerepos' },
+    ],
+  },
+  {
+    id: 5,
+    name: 'CMS',
+    fileTag: 'cms',
+    data: [
+      { id: 1, name: 'Wordpress', image: 'wordpress' },
+      { id: 2, name: 'Elementor', image: 'elementor' },
+      { id: 3, name: 'Shopify', image: 'shopify' },
+    ],
+  },
+  {
+    id: 6,
+    name: "IDE's and Programs",
+    fileTag: 'ides-programs',
+    data: [
+      { id: 1, name: 'Figma', image: 'figma' },
+      { id: 2, name: 'Visual Studio', image: 'vs' },
+      { id: 3, name: 'Visual Studio Code', image: 'vscode' },
+      { id: 4, name: 'Intellij', image: 'intellij' },
+    ],
+  },
+  {
+    id: 7,
+    name: 'Work Methodologies',
+    fileTag: 'work-methodologies',
+    data: [
+      { id: 1, name: 'Jira', image: 'jira' },
+      { id: 2, name: 'Scrum', image: 'scrum' },
+      { id: 3, name: 'Trello', image: 'trello' },
+    ],
+  },
+  {
+    id: 8,
+    name: 'Others',
+    fileTag: 'others',
+    data: [{ id: 1, name: 'UML', image: 'uml' }],
+  },
+];
